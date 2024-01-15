@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive </title>
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+        *{
+            margin: o;
+            padding: 0;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           background-color: #250821;
+           color: #f5f5f5;
+        }
+        
+        header{
+            background:#250821;
+            color: #f5f5f5;
+            padding: 20px 10%;
+
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+        }
+        header ul{
+            width:100% ;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        header li{
+            height: 50px;
+        
+        }
+        header a{
+            height: 100%;
+            padding: 0 30px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items:center ;
+            color:#f5f5f5;
+        }
+        header a:hover{
+            color:#12f7ff;
+            text-shadow: 0  0 10px rgba(18,247,255,0.6),
+    0  0 20px rgba(18,247,255,0.6),
+    0  0 30px rgba(18,247,255,0.6),
+    0  0 40px rgba(18,247,255,0.6),
+    0  0 70px rgba(18,247,255,0.6),
+    0  0 80px rgba(18,247,255,0.6),
+    0  0 100px rgba(18,247,255,0.6),
+    0  0 150px rgba(18,247,255,0.6);
+        }
+        header li:first-child{
+            margin-right: auto;
+        }
+
+        .sidebar{
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index:999 ;
+            border-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        .sidebar li{
+            width: 100%;
+        }
+        .sidebar a{
+          width: 100%;
+        }
+        .menu_btn{
+         background-color:#12f7ff ;
+         font-size: 1.8rem;
+         cursor: pointer;
+         border-radius: 4px;
+         display: none;
+
+        }
+        .closemenu{
+            background-color:#12f7ff ;
+         font-size: 1.8rem;
+         cursor: pointer;
+         border-radius: 4px; 
+        }
+        @media(max-width: 800px){
+            .hideOnMobile{
+                display: none;
+            }
+            .menu_btn{
+                display: block;
+            }
+        }
+        @media(max-width:400px){
+            .sidebar{
+                width: 100%;
+            }
+        }
+     </style>
+
+
+</head>
+<body>
+    <header>
+        <ul class="sidebar">
+            <li class="closemenu" onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a class="logo" href="#"><span>V</span>inay</a></li>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+        <ul>
+            <li><a class="logo" href="#"><span>V</span>inay</a></li>
+            <li class="hideOnMobile"><a href="#home">home</a></li>
+            <li class="hideOnMobile"><a href="#about">about</a></li>
+            <li class="hideOnMobile"><a href="#services">services</a></li>
+            <li class="hideOnMobile"><a href="#skills">skills</a></li>
+            <li class="hideOnMobile"><a href="#portfolio">portfolio</a></li>
+            <li class="hideOnMobile"><a href="#contact">contact</a></li>
+            <li class="menu_btn" onclick="showsidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+
+        </ul>
+    </header>
+
+    <!--  -->
+
+    <!-- home section -------------------------------------------- -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Hi! I am vinay kumar</h1>
+            <div class="change-text">
+                <h3>And I'm </h3>
+                <h3>
+                    <!-- <span class="word"> youtuber</span> -->
+                    <span class="word"> web developer </span>
+                    <span class="word">Frontend &nbsp; developer</span>
+                    <span class="word">ux/ui &nbsp;developer</span>
+                    <!-- <span class="word">backend developer</span> -->
+                </h3>
+            </div>
+            <p>  
+              Vinay Kumar: Full Stack Web Developer mastering front-end (HTML, CSS, JS) 
+              and back-end (Node.js) on Masai School's platform. Crafting seamless 
+              digital experiences with a focus on innovation and efficiency.
+                </p>
+            <div class="info-box">
+                <div class="email-info">
+                    <h5>Email:</h5>
+                    <span><a href="mailto:vinaysikhera2203@gmail.com">vinaysikhera2203@gmail.com</a></span>
+                    <!-- <a href="mailto:vinaysikhera2203@gmail.com">vinaysikhera2203@gmail.com</a> -->
+
+                </div>
+                <div class="behance-info">
+                    <h5>Phone No:</h5>
+                    <span>7351312167</span>
+                </div>
+            </div>
+            
+            <div class="btn-box">
+                <a href="./resume/Vinay Kumar-168-Frontend Developer.pdf" download class="btn"> Download CV</a>
+                <!-- <a href="#" class="btn">Hire me Now!</a> -->
+            </div>
+         
+            <div class="social-icons">
+                <a href="#" ><i class='bx bxl-facebook' ></i></a>
+                <a href="#" ><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/vinay-kumar-820301288/" ><i class='bx bxl-linkedin' ></i></a>
+               <a href="mailto:vinaysikhera2203@gmail.com">  <i class="fas fa-paper-plane"></i></a>
+            </div>
+        </div>
+
+        <div class="hove-image">
+            <div class="img-box">
+                <img src="vinay.jpeg.jpg" alt="">
+            </div>
+            <!-- <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <path fill="#12f7ff">
+                        <animate attributeName="d"
+                           dur="20000ms"
+                           repeatCount="indexfinite"
+                           values="
+                           M428,300.5Q426,351,391.5,393.5Q357,436,303.5,420.5Q250,405,194.5,423.5Q139,442,122.5,387.5Q106,333,72.5,291.5Q39,250,69.5,206.5Q100,163,126.5,122.5Q153,82,201.5,78.5Q250,75,292.5,89.5Q335,104,375.5,129Q416,154,423,202Q430,250,428,300.5Z;
+                           M424.5,302Q430,354,393.5,394.5Q357,435,303.5,434.5Q250,434,207.5,415.5Q165,397,119,374.5Q73,352,40.5,301Q8,250,28.5,192Q49,134,104,113.5Q159,93,204.5,94Q250,95,294.5,95.5Q339,96,401.5,111.5Q464,127,441.5,188.5Q419,250,424.5,302Z;
+                           M456,305.5Q443,361,392.5,385.5Q342,410,296,449.5Q250,489,188.5,476.5Q127,464,119.5,397Q112,330,57,290Q2,250,35.5,197.5Q69,145,105.5,104Q142,63,196,42.5Q250,22,292.5,62.5Q335,103,385,123Q435,143,452,196.5Q469,250,456,305.5Z;
+                           M445.5,304Q436,358,404,409.5Q372,461,311,438.5Q250,416,195,428.5Q140,441,89,406.5Q38,372,40,311Q42,250,54,197Q66,144,116.5,125.5Q167,107,208.5,82.5Q250,58,287.5,89Q325,120,364,141Q403,162,429,206Q455,250,445.5,304Z
+                           M428,300.5Q426,351,391.5,393.5Q357,436,303.5,420.5Q250,405,194.5,423.5Q139,442,122.5,387.5Q106,333,72.5,291.5Q39,250,69.5,206.5Q100,163,126.5,122.5Q153,82,201.5,78.5Q250,75,292.5,89.5Q335,104,375.5,129Q416,154,423,202Q430,250,428,300.5Z;
+                           M452.5,309.5Q457,369,394.5,380.5Q332,392,291,419.5Q250,447,187.5,456.5Q125,466,89,415Q53,364,51,307Q49,250,54,195Q59,140,95.5,92.5Q132,45,191,26.5Q250,8,290.5,58.5Q331,109,377.5,129Q424,149,436,199.5Q448,250,452.5,309.5Z;
+                           M412.5,297Q413,344,387,393.5Q361,443,305.5,464.5Q250,486,196,462Q142,438,116.5,390Q91,342,49,296Q7,250,45,202Q83,154,109,102.5Q135,51,192.5,30Q250,9,290.5,59.5Q331,110,358.5,140.5Q386,171,399,210.5Q412,250,412.5,297Z;
+                           M454,300.5Q425,351,383,379.5Q341,408,295.5,429.5Q250,451,195.5,445Q141,439,124.5,385.5Q108,332,91.5,291Q75,250,96.5,212Q118,174,134.5,126.5Q151,79,200.5,56Q250,33,301.5,52.5Q353,72,395.5,107Q438,142,460.5,196Q483,250,454,300.5Z;
+                           M428,300.5Q426,351,391.5,393.5Q357,436,303.5,420.5Q250,405,194.5,423.5Q139,442,122.5,387.5Q106,333,72.5,291.5Q39,250,69.5,206.5Q100,163,126.5,122.5Q153,82,201.5,78.5Q250,75,292.5,89.5Q335,104,375.5,129Q416,154,423,202Q430,250,428,300.5Z;
+                           M424.5,302Q430,354,393.5,394.5Q357,435,303.5,434.5Q250,434,207.5,415.5Q165,397,119,374.5Q73,352,40.5,301Q8,250,28.5,192Q49,134,104,113.5Q159,93,204.5,94Q250,95,294.5,95.5Q339,96,401.5,111.5Q464,127,441.5,188.5Q419,250,424.5,302Z;
+                           M456,305.5Q443,361,392.5,385.5Q342,410,296,449.5Q250,489,188.5,476.5Q127,464,119.5,397Q112,330,57,290Q2,250,35.5,197.5Q69,145,105.5,104Q142,63,196,42.5Q250,22,292.5,62.5Q335,103,385,123Q435,143,452,196.5Q469,250,456,305.5Z;
+                           M445.5,304Q436,358,404,409.5Q372,461,311,438.5Q250,416,195,428.5Q140,441,89,406.5Q38,372,40,311Q42,250,54,197Q66,144,116.5,125.5Q167,107,208.5,82.5Q250,58,287.5,89Q325,120,364,141Q403,162,429,206Q455,250,445.5,304Z
+                           M428,300.5Q426,351,391.5,393.5Q357,436,303.5,420.5Q250,405,194.5,423.5Q139,442,122.5,387.5Q106,333,72.5,291.5Q39,250,69.5,206.5Q100,163,126.5,122.5Q153,82,201.5,78.5Q250,75,292.5,89.5Q335,104,375.5,129Q416,154,423,202Q430,250,428,300.5Z;
+                           M452.5,309.5Q457,369,394.5,380.5Q332,392,291,419.5Q250,447,187.5,456.5Q125,466,89,415Q53,364,51,307Q49,250,54,195Q59,140,95.5,92.5Q132,45,191,26.5Q250,8,290.5,58.5Q331,109,377.5,129Q424,149,436,199.5Q448,250,452.5,309.5Z;
+                           M412.5,297Q413,344,387,393.5Q361,443,305.5,464.5Q250,486,196,462Q142,438,116.5,390Q91,342,49,296Q7,250,45,202Q83,154,109,102.5Q135,51,192.5,30Q250,9,290.5,59.5Q331,110,358.5,140.5Q386,171,399,210.5Q412,250,412.5,297Z;
+                           M454,300.5Q425,351,383,379.5Q341,408,295.5,429.5Q250,451,195.5,445Q141,439,124.5,385.5Q108,332,91.5,291Q75,250,96.5,212Q118,174,134.5,126.5Q151,79,200.5,56Q250,33,301.5,52.5Q353,72,395.5,107Q438,142,460.5,196Q483,250,454,300.5Z;
+
+                           "
+                        ></animate>
+                    </path>
+                  </svg>
+            </div> -->
+        </div>
+    </section>
+    <!-- aBout section ------------------------------------->
+     <section id="about" class="about">
+        <div class="img-about">
+            <img src="vinay.jpeg.jpg" alt="">
+            <div class="info-about1">
+                <span>0+</span>
+                <p>N0 Experience</p>
+            </div>
+            <div class="info-about2">
+                <span>5+</span>
+                <p> project complete</p>
+            </div>
+            <div class="info-about3">
+                <span>200+</span>
+                <p>happpy Cionts</p>
+            </div>
+        </div>
+        <div class="about-content">
+            <span>Let me introduce myself</span>
+            <h2>About me</h2>
+            <h3>A story of good </h3>
+            <p>
+                
+             Vinay Kumar, a 2022 graduate with a BA from CCSU, is currently advancing his skills 
+             in Full Stack Web Development through Masai School's online platform. With a strong academic
+              foundation, Vinay is dedicated to mastering both front-end and back-end technologies 
+              to create comprehensive web solutions. His passion for coding and commitment to continuous
+               learning position him as a promising professional in the ever-evolving landscape of 
+               web development.
+            <div class="btn-box">
+                <a href="#" class="btn">Read more!</a>
+            </div>
+        </div>
+     </section>
+     <!--  sercices  section  ---------------------------------------------------------------------->
+     <section class="services" id="services">
+        <div class="main-text">
+            <span>what i will do for you</span>
+            <h2>Our sercices</h2>
+        </div>
+
+        <div class="section-services">
+            <div class="service-box">
+                <i class='bx bxs-layer sercices-icon'></i>
+                <h3>Back-end</h3>
+                <p>
+                    Vinay Kumar, skilled in Node.js backend development, crafts robust server-side
+                     logic for web applications. Proficient in JavaScript, he excels in managing data, 
+                     API interactions, and ensuring seamless communication with the frontend.
+                      Vinay's expertise contributes to high-performance applications, emphasizing
+                       optimization and security in building reliable backend systems.                </p>
+                <div class="btn-box service-btn">
+                    <a href="#" class="btn">Read more</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <i class='bx bx-desktop sercices-icon' ></i>
+                <h3>Front-end</h3>
+                <p>
+                    Vinay Kumar, a budding frontend developer, excels in crafting visually 
+                    appealing websites using HTML, CSS, and JavaScript. With a focus on user-centric 
+                    design, he ensures seamless and responsive experiences across platforms.
+                     Vinay's passion for clean and intuitive interfaces makes him a valuable 
+                     contributor to modern web development.
+                </p>
+                <div class="btn-box service-btn">
+                    <a href="#" class="btn">Read more</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <i class='bx bx-code-alt sercices-icon' ></i>
+                <h3>Full-Stack</h3>
+                <p>
+                  Full Stack Web Development integrates front-end and back-end technologies 
+                  for comprehensive web solutions. Professionals like Vinay Kumar, currently 
+                  honing their skills on Masai School's online platform, master both client-side 
+                  (HTML, CSS, JavaScript) and server-side (Node.js) development, ensuring a seamless 
+                  and user-friendly digital experience.
+                </p>
+                <div class="btn-box service-btn">
+                    <a href="#" class="btn">Read more</a>
+                </div>
+            </div>
+        </div>
+     </section> 
+     <!-- skills section--------------------------------------------------------------------------------------- -->
+      <section id="skills" class="skills">
+        <div class="main-text">
+            <span>technical and professional</span>
+            <h2>My Skills </h2>
+        </div>
+
+        <div class="skill-main">
+            <div class="skill-left">
+                <h3>technical Skills</h3>
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>HTML</p>
+                        <P>75%</P>
+                    </div>
+                    <div class="bar">
+                        <span class="html"></span>
+                    </div>
+                </div>
+
+
+                <!-- <div class="skill-bar">
+                    <div class="info">
+                        <p>Figma</p>
+                        <P>80%</P>
+                    </div>
+                    <div class="bar">
+                        <span class="figma"></span>
+                    </div>
+                </div> -->
+
+
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>JavaScript</p>
+                        <P>60%</P>
+                    </div>
+                    <div class="bar">
+                        <span class="javascript"></span>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>CSS</p>
+                        <P>70%</P>
+                    </div>
+                    <div class="bar">
+                        <span class="css"></span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- skills right        -------- -->
+            <div class="skill-right">
+                <h3>Professional Skills</h3>
+                <div class="porfessional">
+                    <div class="box">
+                        <div class="circle" data-dots="50" data-percent="90"></div>
+
+                        <div class="text">
+                            <big>90%</big>
+                            <small>team work</small>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div class="circle" data-dots="80" data-percent="80"></div>
+                        <div class="text">
+                            <big>80%</big>
+                            <small>Creativity</small>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div class="circle" data-dots="80" data-percent="55"></div>
+
+                        <div class="text">
+                            <big>55%</big>
+                            <small>Project Mangement</small>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div class="circle" data-dots="80" data-percent="70"></div>
+
+                        <div class="text">
+                            <big>70%</big>
+                            <small>Communication</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+      </section>
+<!-- section tools --------------------------------------------------------------------- -->
+
+
+
+      <!--portfolio skills ------------------------------------------------------- -->
+       
+      <section id="portfolio" class="portfolio">
+        <div class="main-text">
+            <span>What i will do for you</span>
+            <h2>latest project</h2>
+        </div>
+        
+        <div class="container">
+            <div class="fillter-buttons">
+                <button class="btn " data-filter="all">All</button>
+                <button class="btn" data-filter=".product">product</button>
+                <button class="btn" data-filter=".htmlcss">HTML,CSS</button>
+                <button class="btn" data-filter=".web">web </button>
+                <!-- <button class="btn" data-filter=".web">web app </button> -->
+            </div>
+            <div class="portfolio-gallery">
+                <div class="port-box mix product">
+                    <div class="port-image">
+                        <img src="to-do-list.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>To-do-list</h3>
+                        <p>
+                            Dynamic To-Do List: Crafted with HTML, styled using CSS, and powered by 
+                            JavaScript for an interactive and efficient task management experience. 
+                            Tailored by Vinay Kumar for seamless productivity.                        </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+
+                <div class="port-box mix web">
+                    <div class="port-image">
+                        <img src="e-commerce.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>E-commorce website</h3>
+                        <p>
+                            Building an E-commerce Website: Harnessing the power of HTML for structure,
+                            CSS for styling, and JS for dynamic features. Crafting a seamless online
+                             shopping experience for users.                        
+                            </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="port-box mix product">
+                    <div class="port-image">
+                        <img src="stopWatch.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>stop watch</h3>
+                        <p>
+                            JavaScript Stopwatch: Building a sleek and efficient stopwatch with pure 
+                            JavaScript for seamless timekeeping integration in your web project.
+                        </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="port-box mix product">
+                    <div class="port-image">
+                        <img src="calculator.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>calulater</h3>
+                        <p>   
+                           Creating a feature-rich calculator using HTML for structure, CSS for styling, 
+                           and JavaScript for dynamic functionality. Enhance user interaction and 
+                           calculation experience on your website.  
+                        </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="port-box mix htmlcss">
+                    <div class="port-image">
+                        <img src="netflix.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Netflex clone</h3>
+                        <p>   
+                            Netflix Clone: Crafting a static replica of the Netflix interface using 
+                            HTML for structure and CSS for styling. Achieve the familiar visual
+                             aesthetic of the platform in your web project without utilizing JavaScript.
+                        </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="port-box mix htmlcss">
+                    <div class="port-image">
+                        <img src="uber.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Uber clone </h3>
+                        <p>   
+                            NUber clone: Crafting a static replica of the Uber clone interface using 
+                            HTML for structure and CSS for styling. Achieve the familiar visual
+                             aesthetic of the platform in your web project without utilizing JavaScript.
+                        </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="port-box mix product">
+                    <div class="port-image">
+                        <img src="tik tok te.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>tik to toe </h3>
+                        <p>
+                          Tic-Tac-Toe Game: Crafting an interactive and engaging 
+                          Tic-Tac-Toe game with HTML for structure, CSS for styling, and JavaScript 
+                          for seamless gameplay.  
+                        </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="port-box mix product">
+                    <div class="port-image">
+                        <img src="slider.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>slider</h3>
+                        <p>   
+                          Slider Component: Building a dynamic image slider using HTML for structure,
+                           CSS for styling, and JavaScript for smooth transitions. Enhance website 
+                           aesthetics and user engagement with an interactive image carousel.
+                        </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </section>
+      <!-- contact section--------------------------------------------------------------->
+      <section id="contact" class="contact">
+        <div class="main-text">
+            <span>ask me question</span>
+            <h2>Contect me </h2>
+        </div>
+
+         <form action="#">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Email">
+            <input type="text" placeholder="Your Address">
+            <input type="text" placeholder="Phone Number">
+            <textarea name="" id="" cols="30" rows="10">Your Message</textarea>
+        </form>
+          <div class="btn-box formBtn">
+             <button type="submit" class="btn"> Send Message</button>
+          </div>
+          <div class="social-icons">
+            <a href="#" ><i class='bx bxl-facebook' ></i></a>
+            <a href="#" ><i class='bx bxl-instagram' ></i></a>
+            <a href="https://www.linkedin.com/in/vinay-kumar-820301288/" ><i class='bx bxl-linkedin' ></i></a>
+           <a href="mailto:vinaysikhera2203@gmail.com">  <i class="fas fa-paper-plane"></i></a>
+        </div>
+      </section>
+      
+      <!-- footer ----------------------------------- -->
+      <footer>
+        <p>Copyright  &copy; 2024 by Vinay kume || All Right Reservd </p>
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+      </footer>
+</body>
+</html>
+<script src="script2.js"></script>
+<script src="distmixitup.min.js"></script>
+<script>
+ function showsidebar() {
+    const sidebar=document.querySelector(".sidebar")
+    sidebar.style.display="flex";
+ }
+ function hideSidebar() {
+    const sidebar=document.querySelector(".sidebar")
+    sidebar.style.display="none";
+ }
+</script>
