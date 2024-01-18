@@ -50,7 +50,7 @@ body{
     /* color: var(--text-color); */
     color:#f5f5f5;
 }
-header{
+/* header{
     position: fixed;
     top: 0;
     left: 0;
@@ -114,7 +114,101 @@ display: flex;
     border-radius: 4px;
     color:292e33 ;
     display: none;
+} */
+
+
+header{
+    background:#250821;
+    color: #f5f5f5;
+    padding: 20px 10%;
+
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
+header ul{
+    width:100% ;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header li{
+    height: 50px;
+
+}
+header a{
+    height: 100%;
+    padding: 0 30px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items:center ;
+    color:#f5f5f5;
+}
+header a:hover{
+    color:#12f7ff;
+    text-shadow: 0  0 10px rgba(18,247,255,0.6),
+    0  0 20px rgba(18,247,255,0.6),
+    0  0 30px rgba(18,247,255,0.6),
+    0  0 40px rgba(18,247,255,0.6),
+    0  0 70px rgba(18,247,255,0.6),
+    0  0 80px rgba(18,247,255,0.6),
+    0  0 100px rgba(18,247,255,0.6),
+    0  0 150px rgba(18,247,255,0.6);
+}
+header li:first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index:999 ;
+    border-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu_btn{
+ background-color:#12f7ff ;
+ font-size: 1.8rem;
+ cursor: pointer;
+ border-radius: 4px;
+ display: none;
+
+}
+.closemenu{
+    background-color:#12f7ff ;
+ font-size: 1.8rem;
+ cursor: pointer;
+ border-radius: 4px; 
+}
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu_btn{
+        display: block;
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+
 
 /* next section home section */
 section{
@@ -517,10 +611,7 @@ section{
     width: 75%;
     animation: html 2s;
 }
-/* .skill-bar .bar .figma{
-    width: 90%;
-    animation: figma 3s;
-} */
+
 .skill-bar .bar .javascript{
     width: 60%;
     animation: javascript 4s;
@@ -528,6 +619,10 @@ section{
 .skill-bar .bar .css{
     width: 70%;
     animation: css 5s;
+}
+.skill-bar .bar .react{
+    width: 10%;
+    animation: react 3s;
 }
 /* right skills --------------------- */
 

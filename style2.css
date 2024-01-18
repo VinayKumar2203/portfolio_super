@@ -517,10 +517,7 @@ section{
     width: 75%;
     animation: html 2s;
 }
-/* .skill-bar .bar .figma{
-    width: 90%;
-    animation: figma 3s;
-} */
+
 .skill-bar .bar .javascript{
     width: 60%;
     animation: javascript 4s;
@@ -529,6 +526,10 @@ section{
     width: 70%;
     animation: css 5s;
 }
+ .skill-bar .bar .react{
+    width: 20%;
+    animation: figma 3s;
+} 
 /* right skills --------------------- */
 
 .porfessional{
